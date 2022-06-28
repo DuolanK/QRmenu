@@ -1,0 +1,18 @@
+{% extends "shop/base.html" %}
+
+{% block title %}waiter{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Заказы</h1>
+
+        {% for item in orderitem %}
+            <div class="alert alert-warning">
+                <h3>{{ item.order}}</h3>
+                <p>{{ item.product }}</p>
+                <p>{{ item.price }}</p>
+                <p>{{ item.quantity }}</p>
+            </div>
+{% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Thank you{% endblock %}
+
+{% block content %}
+    <h1>Thank you</h1>
+    <p>Поздравляшки ебатьнахуй ТЫ ПОЛУЧИЛ ЧИСЛО ОХУЕТЬ ТЕПЕРЬ Your order number is
+        <strong>{{ order }}</strong>.</p>
+        <ul>
+            {% for item in OrderItem %}
+            <li>
+                {{ item.quantity }}x {{ item.product }}
+            </li>
+            {% endfor %}
+        </ul>
+{% endblock %}

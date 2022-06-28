@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+        {% if messages %}
+
+    {%for message in messages %}
+
+      {% if message.tags == 'error' %}
+          <div class="alert alert-danger" role="alert">
+            {{ message }}
+          </div>
+      {% else %}
+          <div class="alert alert-{{ message.tags }}" role="alert">
+          </div>
+      {% endif %}
+    {% endfor %}
+
+    {% endif %}
+  </div>
+</head>
+<body>
+<h1>Регистрация</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary btn-block">Регистрация</button>
+</form>
+</body>
+</html>
