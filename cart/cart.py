@@ -3,9 +3,9 @@ from django.conf import settings
 from shop.models import Product
 
 
-class Cart(object):
+#class Cart(object):
 
-    def __init__(self, request):
+    /def __init__(self, request):
         """
         Инициализируем корзину
         """
