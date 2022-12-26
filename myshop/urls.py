@@ -5,10 +5,10 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('waiter/', include('waiter.urls', namespace='waiter')),
-    path('orders/', include('orders.urls', namespace='orders')),
-    path('cart/', include('cart.urls', namespace='cart')),
+    path('adm/', admin.site.urls),
+    path('/', include('waiter.urls', namespace='waiter')),
+    path('/', include('orders.urls', namespace='orders')),
+    path('/', include('cart.urls', namespace='cart')),
     path('', include('shop.urls', namespace='myshop')),
 ]
 
